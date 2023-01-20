@@ -6,11 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:36:32 by mthea             #+#    #+#             */
-/*   Updated: 2023/01/16 09:46:20 by mthea            ###   ########.fr       */
+/*   Updated: 2023/01/18 11:40:02 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "verification_ber.h"
+#include "../Includes/verification_ber.h"
 
 int	ft_number_columns(char **string)
 {

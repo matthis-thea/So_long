@@ -6,11 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 10:11:03 by mthea             #+#    #+#             */
-/*   Updated: 2023/01/09 13:01:14 by mthea            ###   ########.fr       */
+/*   Updated: 2023/01/18 11:39:55 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "verification_ber.h"
+#include "../Includes/verification_ber.h"
 
 int	ft_strlen(char *str)
 {

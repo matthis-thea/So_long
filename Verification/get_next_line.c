@@ -6,11 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 15:46:28 by mthea             #+#    #+#             */
-/*   Updated: 2023/01/09 13:01:17 by mthea            ###   ########.fr       */
+/*   Updated: 2023/01/18 11:39:58 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "verification_ber.h"
+#include "../Includes/verification_ber.h"
 
 char	*ft_reading_file(int fd, char *old_string)
 {

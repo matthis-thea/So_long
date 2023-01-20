@@ -6,18 +6,18 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:45:56 by mthea             #+#    #+#             */
-/*   Updated: 2023/01/16 10:12:42 by mthea            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:04:35 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "verification_ber.h"
+#include "../Includes/verification_ber.h"
 
 void	ft_recursive_flood(char **tab, int pos_p_x, int pos_p_y, int *item)
 {
 	if (tab[pos_p_x][pos_p_y] == 'C' || tab[pos_p_x][pos_p_y] == 'E')
 		(*item)++;
 	if (pos_p_x < 0 || pos_p_y < 0 || tab[pos_p_x][pos_p_y] == 'X' ||
-	tab[pos_p_x][pos_p_y] == '1')
+	tab[pos_p_x][pos_p_y] == '1' || tab[pos_p_x][pos_p_y] == 'G')
 		return ;
 	tab[pos_p_x][pos_p_y] = 'X';
 	ft_recursive_flood(tab, pos_p_x - 1, pos_p_y, item);
