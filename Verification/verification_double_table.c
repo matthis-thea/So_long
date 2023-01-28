@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:22:56 by mthea             #+#    #+#             */
-/*   Updated: 2023/01/18 12:04:44 by mthea            ###   ########.fr       */
+/*   Updated: 2023/01/28 14:24:42 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	ft_verification_wall(char **string)
 	j = 0;
 	while (string[i])
 	{
-		while (j < max)
+		while (string[i][j] != '\n')
 		{
 			if (string[0][j] != '1' || string[max][j] != '1')
 				return (0);
@@ -143,5 +143,8 @@ int	ft_verification_totale(char **string)
 		ft_printf("Error\nThe map is not rectangular!\n");
 		return (0);
 	}
+	verification = ft_verification_items_letters(string);
+	if (verification == 0)
+		return (0);
 	return (1);
 }

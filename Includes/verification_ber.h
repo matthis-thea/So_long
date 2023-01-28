@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:19:20 by mthea             #+#    #+#             */
-/*   Updated: 2023/01/20 14:24:39 by mthea            ###   ########.fr       */
+/*   Updated: 2023/01/28 16:19:19 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <stdlib.h>
 # include "../ft_printf/ft_printf.h"
 # include "../MLX42/include/MLX42/MLX42.h"
+
 typedef struct s_point
 {
 	int			x;
@@ -30,23 +31,25 @@ typedef struct s_point
 
 typedef struct s_manage
 {
-			char	**map;
-			char	**copie;
-			int		x;
-			int		y;
-			int			p_x;
-			int			p_y;
-}				t_manage;
+	char			**map;
+	char			**copie;
+	int				x;
+	int				y;
+	int				p_x;
+	int				p_y;
+	int				col;
+	int				lin;
+	int				all_items;
+	int				count_items;
+	int				c_m;
+	mlx_image_t		*image;
+	mlx_image_t		*img;
+	mlx_image_t		*string;
+	mlx_t			*mlx;
+	mlx_texture_t	*texture;
+	mlx_texture_t	*texture_p;
+}					t_manage;
 
-typedef struct	s_image
-{
-				int		e;
-				int		p;
-				int		c;
-				int		un;
-				int		all;
-				int		g;
-}				t_image;
 char	*get_next_line(int fd);
 char	*ft_reading_file(int fd, char *old_string);
 char	*ft_strcopy_new(char *s);
@@ -74,6 +77,31 @@ int		ft_number_lines(char **string);
 int		ft_position_p_columns(char **string);
 int		ft_position_p_line(char **string);
 int		ft_final_verification(char **map);
-void	*ft_memset(void *str, int value, size_t n);
-int		open_map(t_manage *man, mlx_t *mlx, t_image *img);
+int		ft_placement_p(char *path, t_manage *man);
+int		ft_placement_asset(char *path, t_manage *man);
+int		ft_open_map(t_manage *m);
+int		ft_open_map_2(t_manage *m);
+int		ft_m_up(t_manage	*man);
+int		ft_m_left(t_manage	*man);
+int		ft_m_right(t_manage	*man);
+int		ft_m_down(t_manage	*man);
+void	ft_key_h(mlx_key_data_t keydata, void *param);
+int		ft_placement_c_r(char *path, t_manage *man);
+int		ft_placement_c_l(char *path, t_manage *man);
+int		ft_placement_c_u(char *path, t_manage *man);
+int		ft_placement_c_d(char *path, t_manage *man);
+int		ft_placement_p_move(char *path, t_manage *man);
+int		ft_verification_items_letters(char **map);
+int		verification_file_name(char *argv);
+int		ft_free_all_loose(t_manage *man);
+int		ft_free_all_won(t_manage *man);
+int		ft_allocation_struct(t_manage *man, char *argv);
+void	count_pos_init(t_manage *man);
+char	*ft_strcpy(char *dst, char *src);
+int		ft_lennumb(int n);
+char	*ft_tri(char *tab, int nombre);
+char	*ft_itoa(int n);
+char	*ft_s(char *s1, char *s2);
+void	string_count(t_manage *man);
+void	loop(t_manage *man);
 #endif
