@@ -28,8 +28,6 @@ FLAGS = MLX42/libmlx42.a -I include -lglfw -L /Users/mthea/.brew/opt/glfw/lib
 
 NAME	=	so_long
 
-GITCLONE = git clone https://github.com/codam-coding-college/MLX42.git
-
 RM = rm -rf
 
 #-----------------EXECUTING------------------
@@ -37,8 +35,6 @@ RM = rm -rf
 
 all : $(NAME)
 
-clone : $(GITCLONE)
-	$(GITCLONE)
 
 $(NAME) : $(FT_PRINTF_OBJ) $(VERIFICATION_OBJ) $(IMAGES_OBJ) 
 	$(CC) $(CFLAGS) $(FLAGS) $(FT_PRINTF_OBJ) $(IMAGES_OBJ) $(VERIFICATION_OBJ) -o $(NAME)
