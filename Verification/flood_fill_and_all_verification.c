@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/verification_ber."
+#include "../Includes/verification_ber.h"
 
 void	ft_recursive_flood(char **tab, int pos_p_x, int pos_p_y, int *item)
 {
