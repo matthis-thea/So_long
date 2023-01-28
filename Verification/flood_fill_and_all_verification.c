@@ -63,6 +63,6 @@ int	ft_final_verification(char **map)
 	verification_flood = ft_verification_flood_fill(map);
 	if (verification_flood == 0)
 		return (0);
-	ft_printf("Map is ok\n");
+	ft_printf("Map is ok !\n");
 	return (1);
 }
